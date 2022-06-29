@@ -7,30 +7,23 @@ import model.Aluno;
 
 public class DaoInserirScanner {
 	public static void main(String[] args) {
-		Scanner inputId = new Scanner(System.in);
-		Scanner inputNome = new Scanner(System.in);
-		Scanner inputEmail = new Scanner(System.in);
-		Scanner inputCpf = new Scanner(System.in);
-		Scanner inputNascimento = new Scanner(System.in);
-		Scanner inputNaturalidade = new Scanner(System.in);
-		Scanner inputEndereco = new Scanner(System.in);
-		
+		Scanner inputData = new Scanner(System.in);
 		Aluno aluno = new Aluno();
 		
 		System.out.print("\nId.....................: ");
-		aluno.setId(inputId.nextInt());
+		aluno.setId(inputData.nextInt());
 		System.out.print("\nNome...................: ");
-		aluno.setNome(inputNome.nextLine());
+		aluno.setNome(inputData.nextLine());
 		System.out.print("\nE-mail.................: ");
-		aluno.setEmail(inputEmail.nextLine());
+		aluno.setEmail(inputData.nextLine());
 		System.out.print("\nCPF....................: ");
-		aluno.setCpf(inputCpf.nextLine());
+		aluno.setCpf(inputData.nextLine());
 		System.out.print("\nNascimento (aaaa/mm/dd): ");
-		aluno.setDataDeNascimento(inputNascimento.nextLine());//aaaa/mm/dd
+		aluno.setDataDeNascimento(inputData.nextLine());//aaaa/mm/dd
 		System.out.print("\nNaturalidade...........: ");
-		aluno.setNaturalidade(inputNaturalidade.nextLine());
+		aluno.setNaturalidade(inputData.nextLine());
 		System.out.print("\nEndereço...............: ");
-		aluno.setEndereco(inputEndereco.nextLine());
+		aluno.setEndereco(inputData.nextLine());
 		
 		try {
 			AlunoDao dao = new AlunoDao();
